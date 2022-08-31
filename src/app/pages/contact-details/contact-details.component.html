@@ -1,0 +1,19 @@
+<div class="contact-details">
+    <section>
+        <h3>{{contact.name}}</h3>
+        <h3>{{contact.phone}}</h3>
+        <h3>{{contact.email}}</h3>
+    </section>
+    <transfer-funds *ngIf="loggedinUser.coins>0" (onTransferFunds)="onTransferFunds($event)" [loggedinUser]="loggedinUser" [contactName]="contact.name"></transfer-funds>
+    <h3 *ngIf="!(loggedinUser.coins>0)">No funds to transfer..</h3>
+    <section *ngIf="moves.length>0">
+        <ul>
+            <li *ngFor="let move of moves" class="flex column move-preview">
+                <h4>To : {{this.move.to}}</h4>
+                <h4>At : {{_formatDate(this.move.at)}}</h4>
+                <h4>Amount : {{this.move.amount}}</h4>
+            </li>
+        </ul>
+    </section>
+    <button  (click)="onBack()">Back</button>
+</div>

@@ -1,0 +1,5 @@
+<div class="contact-list ">
+    <ul class="clean-list">
+        <contact-preview *ngFor="let c of contacts" [contact]="c" (onRemove)="onRemove.emit($event)"></contact-preview>
+    </ul>
+</div>

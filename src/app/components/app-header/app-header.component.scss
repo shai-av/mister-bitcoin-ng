@@ -1,0 +1,25 @@
+.app-header {
+    background-color: #22123e;
+    > section {
+        display: flex;
+        align-items: center;
+
+        h1.logo {
+            flex-grow: 1;
+            font-weight: 600;
+        }
+
+        .back {
+            flex-grow: 1;
+        }
+
+        nav {
+            a{
+                cursor: pointer;
+            }
+            a:not(:last-of-type) {
+                margin-inline-end: 8px;
+            }
+        }
+    }
+}

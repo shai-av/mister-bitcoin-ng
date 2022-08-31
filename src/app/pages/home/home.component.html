@@ -1,0 +1,15 @@
+<section class="home-page">
+    <h1>Hello {{user.name}}!</h1>
+    <h3>Coins: {{user.coins}}</h3>
+    <h3>BTC: {{bitcoinRate}}</h3>
+    <section *ngIf="user.moves.length>0">
+        <ul>
+                                <li *ngFor="let move of moves" class="flex column move-preview">
+                                    <h4>To: {{move.to}}</h4>
+                                    <h4>At: {{_formatDate(move.at)}}</h4>
+                                    <h4>Amount: {{move.amount}}</h4>
+                                </li>
+    
+        </ul>
+    </section>
+    </section>

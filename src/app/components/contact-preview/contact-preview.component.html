@@ -1,0 +1,14 @@
+<li class='flex space-between contact-preview'>
+    <div class="flex gap-4">
+        <img src="http://robohash.org/{{contact._id}}?set=set4" style="width:30px" alt="">
+        <h3>
+            {{contact.name}}
+        </h3>
+    </div>
+    <div class='actions'>
+        <a style="color:#0086b9" routerLink="/contact/{{contact._id}}" routerLinkActive="active">Details</a>
+        <a style="color:orange" routerLink="/contact/edit/{{contact._id}}" routerLinkActive="active">Edit</a>
+        <a style="color:red" (click)="onRemoveContact()">Delete</a>
+    </div>
+
+</li>

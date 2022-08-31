@@ -1,0 +1,8 @@
+<section>
+    <h3>Transfer funds to {{contactName}}</h3>
+    <input type="range" [(ngModel)]="fundsToTransfer" [title]="fundsToTransfer" name="funds" min="0" [max]="loggedinUser.coins"/>
+    <span>{{fundsToTransfer}}</span>
+    <p>
+        <button (click)="onTransfer()">Transfer</button>
+    </p>
+</section>
