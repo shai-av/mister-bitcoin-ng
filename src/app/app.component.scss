@@ -2,14 +2,14 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    // background-image: url('https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNDc5NDh8MHwxfHNlYXJjaHwxN3x8cG9seWdvbnMlMjBncmFkaWVudHxlbnwwfDB8fHwxNjYxNjgyNzQ1&ixlib=rb-1.2.1&q=80&w=1080');
-    // object-fit:fill;
-    background-image: url('../assets/images/pkg.gif');
-    background-position:center;
+    background-image: url('../assets/images/pgk-ezgif.gif');
     background-repeat: no-repeat;
     background-size:cover;
     color:whitesmoke;
     
+    @media screen and (max-width:500px){
+        background-position:right;
+    }
 
     // .app-header {
     //     background-color: #22123e;

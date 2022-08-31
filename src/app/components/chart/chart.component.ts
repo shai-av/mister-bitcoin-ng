@@ -21,11 +21,37 @@ export class ChartComponent implements OnInit {
     this.chartData = [
       {
         label: 'Bitcoin Market Price USD',
-        data: this.yVals
+        data: this.yVals,
+        borderColor:'#ffffff',
       }
     ];
     this.chartLabels = this.xVals;
-    this.chartOptions = {};
+    this.chartOptions = {
+      elements: {
+        point:{
+            radius: 0
+        }
+    },
+   scales:{
+    x: {
+      ticks: {
+        color: '#ffffff'
+      }
+    },
+    y: {
+      ticks: {
+        color: '#ffffff'
+      }
+    }
+   },
+   plugins:{
+    legend:{
+      labels:{
+        color:'#ffffff'
+      }
+    }
+   }
+    };
   }
   constructor() { }
 
